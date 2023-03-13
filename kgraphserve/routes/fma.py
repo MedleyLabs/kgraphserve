@@ -25,6 +25,12 @@ obo = get_namespace('http://purl.org/sig/ont/fma/')
 
 
 def parse_data(entity_name):
+    """
+    Parses SPARQL data to generate relations for a particular entity
+
+    :param entity_name: str - The name of the FMA entity
+    :return data: dict - Each key is the relation type and each value is a list of related entities
+    """
 
     properties = list(default_world.sparql(f'''
        SELECT ?y
@@ -83,7 +89,10 @@ def parse_data(entity_name):
 
 @fma.route('/fma/get_data', methods=['POST'])
 def get_data():
+    """ Returns relations for a given entity from the FMA """
+
     entity_name = request.json.get('entity_name')
     data = parse_data(entity_name)
     response = jsonify(data)
+
     return response

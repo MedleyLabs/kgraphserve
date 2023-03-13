@@ -7,7 +7,13 @@ from tqdm.auto import tqdm
 
 
 def download(url, filename):
-    """ Downloads a file from url into filename with progress bar """
+    """
+    Downloads a file from url into filename with progress bar
+
+    :param url: str - Where to download the file from
+    :param filename: str - Where to save the file to
+    :return path: str - Path to the downloaded file
+    """
 
     r = requests.get(url, stream=True, allow_redirects=True)
 
