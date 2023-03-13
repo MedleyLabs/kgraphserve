@@ -12,6 +12,7 @@ setup(
         'flask',
         'flask_cors',
         'owlready2',
+        'pyyaml',
         'requests',
         'tqdm',
     ],
