@@ -12,7 +12,8 @@ setup(
         'flask',
         'flask_cors',
         'owlready2',
-        'wget'
+        'requests',
+        'tqdm',
     ],
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',

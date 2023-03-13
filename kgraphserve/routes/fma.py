@@ -1,7 +1,6 @@
 """ Foundational Model of Anatomy (FMA) integration """
 
 import os
-import requests
 
 from flask import Blueprint, jsonify, request
 from owlready2 import (
