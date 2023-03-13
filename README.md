@@ -1,2 +1,2 @@
 # kgraphserve
-Flask app for serving knowledge graph data
+Flask app for serving knowledge graphs
