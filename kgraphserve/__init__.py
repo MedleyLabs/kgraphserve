@@ -22,7 +22,11 @@ def create_app():
 
     # Importing blueprints here avoids circular dependencies
     from kgraphserve.routes.fma import fma
+    from kgraphserve.routes.language_models import language_models
+    from kgraphserve.routes.website import website
 
     app.register_blueprint(fma)
+    app.register_blueprint(language_models)
+    app.register_blueprint(website)
 
     return app
