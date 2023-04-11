@@ -20,8 +20,12 @@ if not os.path.exists(owl_path):
     print('Downloading FMA (this may take a while)...')
     download(url, owl_path)
 
+print('Loading FMA into memory...')
+
 onto = get_ontology(f'file://{owl_path}').load()
 obo = get_namespace('http://purl.org/sig/ont/fma/')
+
+print('FMA loaded...')
 
 
 def parse_data(entity_name):
